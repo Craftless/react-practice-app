@@ -9,7 +9,7 @@ function MealsList() {
       <Card>
         <ul>
           {DUMMY_MEALS.map((meal) => (
-            <MealItem meal={meal} />
+            <MealItem key={meal.id + Math.random().toFixed(3)} meal={meal} />
           ))}
         </ul>
       </Card>
@@ -17,7 +17,7 @@ function MealsList() {
   );
 }
 
-const DUMMY_MEALS: Meal[] = [
+export const DUMMY_MEALS: Meal[] = [
   {
     id: "m1",
     name: "Sushi",
